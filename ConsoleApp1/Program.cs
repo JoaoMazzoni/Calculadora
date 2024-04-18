@@ -1,4 +1,5 @@
-﻿float num1;
+﻿
+float num1;
 float num2;
 float resultadoSoma;
 float resultadoSub;
@@ -13,7 +14,7 @@ num1 = float.Parse(Console.ReadLine());
 Console.Write("Digite o segundo número: ");
 num2 = float.Parse(Console.ReadLine());
 
-Console.WriteLine("Digite a operação matemática | Soma (+) | Subtração (-) | Multiplicação (*) | Divisão (/) | : ");
+Console.Write("\nDigite a operação matemática | Soma (+) | Subtração (-) | Multiplicação (*) | Divisão (/) | : ");
 operacao = Console.ReadLine();
 
 
@@ -59,7 +60,7 @@ else if (operacao == "Divisão" || operacao == "Divisao" || operacao == "divisã
 
 }
 
-else 
+else
 {
     Console.WriteLine("Operação inválida.");
 }
