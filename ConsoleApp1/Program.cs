@@ -31,7 +31,6 @@ while (true)
     }
 
 
-
     else if (operacao == "multiplicação" || operacao == "multiplicacao" || operacao == "Multiplicação" || operacao == "Multiplicacao" || operacao == "*")
     {
         resultadoMulti = num1 * num2;
