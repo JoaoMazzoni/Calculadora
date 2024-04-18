@@ -1,7 +1,4 @@
-﻿
-using System.Xml;
-
-float num1;
+﻿float num1;
 float num2;
 float resultadoSoma;
 float resultadoSub;
@@ -49,13 +46,11 @@ while (true)
         }
 
 
-
         else
         {
             resultadoDivisao = num1 / num2;
             Console.WriteLine("\n|A divisão de {0} e {1} é: {2}|", num1, num2, resultadoDivisao);
         }
-
     }
 
     else
