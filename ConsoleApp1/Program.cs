@@ -1,118 +1,107 @@
-﻿
-float num1 = 0;
-float num2 = 0;
-float num3 = 0;
-float num4 = 0;
-float resultadoSoma;
-float resultadoSub;
-float resultadoMulti;
-float resultadoDivisao;
-string operacao;
-bool controleTrueFalse;
+﻿while (true) { 
 
-while (true)
-{
+    float num1 = 0;
+    float num2 = 0;
+    float num3 = 0;
+    float num4 = 0;
+    float resultadoSoma;
+    float resultadoSub;
+    float resultadoMulti;
+    float resultadoDivisao;
+    int operacao;
+    bool controleTrueFalse;
 
+    Console.WriteLine("\n---==== CALCULADORA ====----\n\n");
     Console.Write("\nDigite o primeiro número: ");
     num1 = float.Parse(Console.ReadLine());
 
-    while (num2 == 0)
-    {
+  
         Console.Write("\nDigite o segundo número: ");
         num2 = float.Parse(Console.ReadLine());
         if(num2 == 0)
         {
             controleTrueFalse = false; 
+        } 
 
-            if (controleTrueFalse == false) 
-            {
-                Console.WriteLine("\nO número não pode ser zero!");
-            }
-        }
-    } 
-
-    do
-    {
         Console.Write("\nDigite o terceiro número: ");
         num3 = float.Parse(Console.ReadLine());
         if (num3 == 0)
         {
             controleTrueFalse = false;
-
-            if (controleTrueFalse == false)
-            {
-                Console.WriteLine("\nO número não pode ser zero!");
-            }
         }
 
-    } while (num3 == 0);
-
-
-    for (num4 = 0 ; num4 == 0;)
-    {
         Console.Write("\nDigite o quarto número: ");
         num4 = float.Parse(Console.ReadLine());
         if (num4 == 0)
         {
             controleTrueFalse = false;
-
-            if (controleTrueFalse == false)
-            {
-                Console.WriteLine("\nO número não pode ser zero!");
-            }
         }
-    }
+   
 
 
     do {
-        Console.Write("\nDigite a operação matemática | Soma (+) | Subtração (-) | Multiplicação (*) | Divisão (/) | : ");
-        operacao = Console.ReadLine();
+
+        Console.WriteLine("\n\n===========================================\n");
+        Console.WriteLine("| 1 | Soma");
+        Console.WriteLine("| 2 | Subtração");
+        Console.WriteLine("| 3 | Multiplicação");
+        Console.WriteLine("| 4 | Divisão");
+        Console.WriteLine("\n===========================================\n\n");
+        Console.Write("\n|Digite o número da operação matemática: ");
+        operacao = int.Parse(Console.ReadLine());
 
 
-        if (operacao == "Soma" || operacao == "soma" || operacao == "+")
+        switch (operacao)
         {
-            resultadoSoma = num1 + num2 + num3 + num4;
-            Console.WriteLine("\nA soma de {0} + {1} + {2} + {3} é: {4}", num1, num2, num3, num4, resultadoSoma);
-            controleTrueFalse = true;
-        }
 
-        else if (operacao == "Subtração" || operacao == "subtração" || operacao == "subtracao" || operacao == "Subtracao" || operacao == "-")
-        {
-            resultadoSub = num1 - num2 - num3 - num4;
-            Console.WriteLine("\nA subtração de {0} - {1} - {2} - {3} é: {4} ", num1, num2, num3, num4, resultadoSub);
-            controleTrueFalse = true;
-        }
-
-
-        else if (operacao == "multiplicação" || operacao == "multiplicacao" || operacao == "Multiplicação" || operacao == "Multiplicacao" || operacao == "*")
-        {
-            resultadoMulti = num1 * num2 * num3 * num4;
-            Console.WriteLine("\nA multiplicação de {0} * {1} * {2} * {3} é: {4} ", num1, num2, num3, num4, resultadoMulti);
-            controleTrueFalse = true;
-        }
-
-        else if (operacao == "Divisão" || operacao == "Divisao" || operacao == "divisão" || operacao == "divisao" || operacao == "/")
-        {
-            if (num2 == 0 || num3 == 0 || num4 == 0)
-            {
-                Console.WriteLine("\nImpossivel dividir por zero!");
-                controleTrueFalse = false;
-            }
-
-
-            else
-            {
-                resultadoDivisao = num1 / num2 / num3 / num4;
-                Console.WriteLine("\nA divisão de {0} / {1} / {2} / {3} é: {4}", num1, num2, num3, num4, resultadoDivisao);
+            case 1:
+                resultadoSoma = num1 + num2 + num3 + num4;
+                Console.WriteLine("\nA soma de {0} + {1} + {2} + {3} é: {4}", num1, num2, num3, num4, resultadoSoma);
                 controleTrueFalse = true;
-            }
-        }
+                break;
 
-        else
-        {
-            Console.WriteLine("\n|Operação inválida!|");
-            controleTrueFalse = false;
+            case 2:
+
+                resultadoSub = num1 - num2 - num3 - num4;
+                Console.WriteLine("\nA subtração de {0} - {1} - {2} - {3} é: {4} ", num1, num2, num3, num4, resultadoSub);
+                controleTrueFalse = true;
+                break;
+
+            case 3:
+
+                resultadoMulti = num1 * num2 * num3 * num4;
+                Console.WriteLine("\nA multiplicação de {0} * {1} * {2} * {3} é: {4} ", num1, num2, num3, num4, resultadoMulti);
+                controleTrueFalse = true;
+                break;
+
+            case 4:
+
+                if (num2 == 0 || num3 == 0 || num4 == 0)
+                {
+                    controleTrueFalse = false;
+                    Console.WriteLine("\nImpossivel dividir por zero!");
+                    
+                }
+
+                else
+                {
+                    controleTrueFalse = true;
+                    resultadoDivisao = num1 / num2 / num3 / num4;
+                    Console.WriteLine("\nA divisão de {0} / {1} / {2} / {3} é: {4}", num1, num2, num3, num4, resultadoDivisao);
+                    
+                }
+                break;
+
+
+
+            default:
+
+                Console.WriteLine("\n\n|Operação inválida!|");
+                controleTrueFalse = false;
+                break;
+
         }
+        
 
     } while (controleTrueFalse ==  false);
 
