@@ -56,6 +56,7 @@
 
             case 1:
                 resultadoSoma = num1 + num2 + num3 + num4;
+                Console.Clear();
                 Console.WriteLine("\nA soma de {0} + {1} + {2} + {3} é: {4}", num1, num2, num3, num4, resultadoSoma);
                 controleTrueFalse = true;
                 break;
@@ -63,6 +64,7 @@
             case 2:
 
                 resultadoSub = num1 - num2 - num3 - num4;
+                Console.Clear();
                 Console.WriteLine("\nA subtração de {0} - {1} - {2} - {3} é: {4} ", num1, num2, num3, num4, resultadoSub);
                 controleTrueFalse = true;
                 break;
@@ -70,6 +72,7 @@
             case 3:
 
                 resultadoMulti = num1 * num2 * num3 * num4;
+                Console.Clear();
                 Console.WriteLine("\nA multiplicação de {0} * {1} * {2} * {3} é: {4} ", num1, num2, num3, num4, resultadoMulti);
                 controleTrueFalse = true;
                 break;
@@ -79,6 +82,7 @@
                 if (num2 == 0 || num3 == 0 || num4 == 0)
                 {
                     controleTrueFalse = false;
+                    Console.Clear();
                     Console.WriteLine("\nImpossivel dividir por zero!");
                     
                 }
@@ -87,15 +91,16 @@
                 {
                     controleTrueFalse = true;
                     resultadoDivisao = num1 / num2 / num3 / num4;
+                    Console.Clear();
                     Console.WriteLine("\nA divisão de {0} / {1} / {2} / {3} é: {4}", num1, num2, num3, num4, resultadoDivisao);
                     
                 }
                 break;
 
 
-
             default:
 
+                Console.Clear();
                 Console.WriteLine("\n\n|Operação inválida!|");
                 controleTrueFalse = false;
                 break;
